@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  height: 70px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.menu-items {
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.icon-section {
+  display: flex;
+  margin-right: 30px;
+}
+
+.icon-section i {
+  padding: 6px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon-section div {
+  border: 1px solid;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  margin: 4px;
+}
+
+#menuToggle {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+nav {
+  background-color: white;
+  color: black;
+  height: 100vh;
+  left: -100vw;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 100vw;
+}
+
+nav label {
+  line-height: 3;
+  margin-right: 1rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#menuToggle:checked + label + nav {
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav {
+  display: none;
+}
+
+.toggle-icon {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.banner-button {
+  position: absolute;
+  left: 38px;
+  bottom: 38px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) 38%,
+    rgb(131 131 131) 100%
+  );
+  min-width: 163px;
+  border: unset;
+  padding: 12px 72px;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.spotlight {
+  display: flex;
+  background-color: #bbbabc;
+  padding: 35px;
+  text-align: center;
+  margin-top: -2px;
+}
+
+.spotlight-items {
+  margin: 10px;
+  width: 33%;
+}
+
+.card-section {
+  display: flex;
+  padding: 0px 70px;
+}
+
+.card {
+  margin: 30px;
+  width: 33%;
+  font-weight: 600;
+}
+
+.card .card-body img {
+  width: 100%;
+}
+
+.card h4 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.card p {
+  margin-top: 20px;
+}
+
+.card button {
+  margin-top: 20px;
+  border: unset;
+  min-width: 163px;
+  padding: 7px;
+  background-color: black;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.card-body.card-center {
+  text-align: center;
+}
+
+.card-body.card-right {
+  text-align: end;
+}
+
+.features {
+  background-color: #dcd5db;
+}
+
+.feature-header {
+  padding: 28px 100px;
+  font-size: 27px;
+}
+
+h1 {
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  text-align: center;
+  width: 100vw;
+  margin: auto;
+  position: absolute;
+  bottom: 13px;
+  left: 44%;
+}
+
+@media screen and (max-width: 750px) {
+  .banner-button {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .card-section {
+    display: block;
+    padding: 0px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .spotlight {
+    display: block;
+  }
+
+  .spotlight-items {
+    margin: auto;
+    width: 89%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card-body.card-right {
+    text-align: center;
+  }
+
+  .card-body.card-left {
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block !important;
+  }
+
+  #check:checked ~ ul {
+    display: block !important;
+  }
+
+  ul {
+    line-height: 2;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .feature-header {
+    text-align: center;
+  }
+}
+
+@media (min-width: 750px) {
+  .nav {
+    display: flex;
+  }
+
+  .sidebar-nav {
+    display: none;
+  }
+
+  header > label,
+  nav label {
+    display: none;
+  }
+
+  nav {
+    background-color: transparent;
+    color: black;
+    display: flex;
+    height: auto;
+    left: auto;
+    position: relative;
+    transform: none;
+    transition: none;
+    top: auto;
+    width: auto;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  ul li {
+    margin-left: 1rem;
+  }
+}
